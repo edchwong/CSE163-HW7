@@ -1,5 +1,5 @@
 //Setting width and height of the svg
-var width = 960,
+var width = 1000,
     height = 500;
 
 //Creating SVG
@@ -19,7 +19,7 @@ var color = d3.scaleThreshold()
 //Defining the scale for the legend
 var x = d3.scaleSqrt()
     .domain([0, 1500])
-    .range([50, 950]);
+    .range([50, 900]);
 
 //Appending a g element to the svg
 var g = svg.append("g")
@@ -112,7 +112,7 @@ d3.json("counties-10m.json", function(error, counties) {
             .on("mouseover", function(d) {
                 //console.log(d);
                 d3.select("#tooltip")
-                    .style("left", (d3.event.clientX - 80) + "px")
+                    .style("left", (d3.event.clientX+20) + "px")
                     .style("top", (d3.event.clientY - 20) + "px");
                 d3.select(".title")
                     .text(d.properties.name);
