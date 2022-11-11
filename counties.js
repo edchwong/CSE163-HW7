@@ -1,5 +1,5 @@
 //Setting width and height of the svg
-var width = 960,
+var width = 1000,
     height = 500;
 
 //Creating SVG
@@ -19,7 +19,7 @@ var color = d3.scaleThreshold()
 //Defining the scale for the legend
 var x = d3.scaleSqrt()
     .domain([0, 1500])
-    .range([50, 950]);
+    .range([50, 900]);
 
 //Appending a g element to the svg
 var g = svg.append("g")
