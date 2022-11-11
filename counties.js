@@ -82,7 +82,7 @@ d3.json("counties-10m.json", function(error, counties) {
     
     //Accessing the density data
     var utah_densities;
-    d3.csv("Utah_County_population.csv", function(error, population) {
+    d3.csv("Utah_County_Population.csv", function(error, population) {
         if (error) return console.error(error);
         
         //Filtering the density data for just Utah
