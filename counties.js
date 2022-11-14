@@ -112,11 +112,8 @@ d3.json("counties-10m.json", function(error, counties) {
             .on("mouseover", function(d) {
                 //console.log(d);
                 d3.select("#tooltip")
-<<<<<<< HEAD
                     .style("left", (d3.event.clientX+20) + "px")
-=======
                     .style("left", (d3.event.clientX + 20) + "px")
->>>>>>> 0c55c5066b65f89762ebbf5e66872d513f263bec
                     .style("top", (d3.event.clientY - 20) + "px");
                 d3.select(".title")
                     .text(d.properties.name);
@@ -146,14 +143,14 @@ d3.json("counties-10m.json", function(error, counties) {
 
         change_color.addEventListener('change', function () {
             if (change_color.checked) {
-                color.range(d3.schemePuRd[9]);
+                color.range(colors2);
                 svg.selectAll("path").style("fill", function(d) { 
                     return color(county_density[d.properties.name + " County"]);});
                 g.selectAll("rect").attr("fill", function(d) { 
                     console.log(color(d[0]));
                     return color(d[0]); });
             } else {
-                color.range(d3.schemeBlues[9])
+                color.range(colors1)
                 svg.selectAll("path").style("fill", function(d) { 
                     return color(county_density[d.properties.name + " County"]);});
                 g.selectAll("rect").attr("fill", function(d) { 
